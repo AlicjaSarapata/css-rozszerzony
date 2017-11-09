@@ -1,0 +1,192 @@
+/*befor i after NIE ISTNIEJA w dokumencie, jako programisci jestesmy w stanie dodac taki element. Aby utworzyc before i after MUSIM ustawic wlacwiwosc CONTENT (moze byc pusta) np: content: '';*/
+
+#before_after p::before {
+    content: 'p ';
+    color: red;
+}
+#before_after p::after {
+    content: ' p';
+    color: red;
+}
+
+/*::first-letter zmienia pierwsza litere w danym elemencie*/
+
+#before_after p::first-letter{
+    color: yellow;
+    font-weight: bold;
+}
+
+/*::first-line zmienia wyglad pierwszej linii tekstu*/
+
+#before_after p::first-line{
+    font-size: 20px;
+    color: red;
+}
+
+/*pseudo-klasy linkow*/
+
+#linki a {
+    text-decoration: none;
+}
+/*:link - nieodwiedzony*/
+
+#linki a:link {
+    color: hotpink;
+    font-style: italic;
+}
+
+/*:visited- odwiedzony*/
+#link a: visited {
+    color: grey;
+}
+/*:hover - po najechaniu myszka*/
+#linki a:hover {
+    border: 1px solid black;
+}
+
+/*:active - od momentu klikniecie do moementu puszczenia LPM*/
+#link a:active {
+    color: red;
+    font-weight: bold;
+}
+
+/*:focus - najczesciej uzywany do pol forlmularza (input). Odpalane, kiedy pole formularza jest aktywne*/
+#inputy input:focus {
+    border: 3px solid black;
+}
+
+/*:target - okresla wyglad elementu, do ktorego prowadzi KOTWICA*/
+div:target {
+    border: 1px solid black;
+}
+
+/*:lang - okresla wyglad elementu o podanym atrybucie lang w HTML*/
+div:lang(pl) {
+    border: 3px solid blue;
+}
+
+/*:first-child - okresla wyglad pierwszego zagniezdzonego elementu z listy*/
+#childs ul li:first-child {
+    font-size: 30px;
+    color: red;
+}
+
+/*:last-child - okresla wyglad ostatniego zagniezdzonego elementu z listy*/
+#childs ul li:last-child {
+    background-color: yellow;
+}
+
+
+/*:only-child - okresla wyglad JEDYNEGO elementu swojego rodzica*/
+#before_after p:only-child {
+    color: violet;
+}
+
+/*:empty - lapie lement, ktory nie ma zawartosci (nic zagniezdzonego, lacznie z tekstem)*/
+#childs span:empty {
+    display: block;
+    height: 200px;
+    width: 200px;
+    background-color: green;
+}
+
+/*:nth-child() / :nth-last-child(), wyszukuje dzieci wedle podanego wzoru. :nth-child rozpoczyna liczenie od pierwszego do ostatniego dziecka, natomiast :nth-last child () rozpoczyna liczenie od ostatniego do pierwszego dziecka. Ilosc elementow ma znaczenie*/
+#childs ul li:nth-last-child(even) {
+    background-color: blueviolet;  
+}
+
+/*liczba - zaznaczy okreslony liczbowo element tekst*/
+#childs ul li:nth-child(5) {
+    background-color: green;  
+}
+
+/*an+b - liczy od b co ilosc a elementy*/
+#childs ul li:nth-child(4n+1) {
+    background-color: yellow;  
+}
+
+/*selektor atrybutow*/
+/*- po nazwie atrybutu*/
+#atrybuty input[type] {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/*-po okreslonej wartosci atrybutu*/
+#atrybuty input[type="tel"] {
+    border: 5px solid black;
+}
+
+
+/*- po atrybucie wartosci atrybutu, nalezy podac DOKLADNA WARTOSC*/
+#atrybuty input[type~="opis"] {
+    border: 5px solid red;
+}
+
+
+/*- po wystepijacej wartosci atrybutu, szuka podanego przez nas ciagu znakow*/
+#atrybuty input[type*="op"] {
+    border: 5px solid violet;
+}
+
+/*-po wartosci atrybutu, ktore zaczyna sie od podanego ciagu znakow*/
+#atrybuty input[type^="pierwszy"] {
+    border: 5px solid red;
+}
+
+/*-po wartosci atrybutu, ktory konczy sie na podany ciag znakow*/
+#atrybuty input[type$="p"] {
+    border: 5px solid red;
+}
+
+/*Centrowanie inline-block w block*/
+
+#inline-block {
+    text-align: center;
+}
+#inline-block div {
+    display: inline-block;
+    width: 50%;
+    background: red;
+}
+
+#main-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: bisque;
+}
+
+#main-nav ul {
+    text-align: center;
+    padding: 0;
+}
+#main-nav ul li {
+    display: inline-block;
+    
+}
+
+
+
+    
+
+
+
+
+
+
+
+
+-
+
+
+
+
+
+
+
+
+
